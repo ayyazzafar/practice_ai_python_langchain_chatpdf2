@@ -69,7 +69,8 @@ class PDFQuery:
         self.db = Chroma.from_documents(
             splitted_documents, self.embeddings).as_retriever()
         # Load the question answering chain
-        self.chain = load_qa_chain(OpenAI(temperature=0), chain_type="stuff")
+        self.chain = load_qa_chain(
+            OpenAI(temperature=0, model_name="gpt-3.5-turbo-16k"), chain_type="stuff")
 
     def forget(self) -> None:
         """
