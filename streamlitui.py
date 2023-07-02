@@ -126,7 +126,7 @@ def main():
     st.divider()
     # Add a link to the source code
     st.markdown(
-        "Source code: [Github](https://github.com/Anil-matcha/ChatPDF)")
+        "AyyazTech")
 
 
 # If the script is being run directly, call the main function
