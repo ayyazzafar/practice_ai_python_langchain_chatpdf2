@@ -25,7 +25,8 @@ class PDFQuery:
         self.text_splitter = RecursiveCharacterTextSplitter(
             chunk_size=1000, chunk_overlap=200)
         # Initialize a language model
-        self.llm = OpenAI(temperature=0, openai_api_key=openai_api_key)
+        self.llm = OpenAI(
+            temperature=0, openai_api_key=openai_api_key, model_name="gpt-3.5-turbo-16k")
         # Initialize the question answering chain and database to None
         self.chain = None
         self.db = None
